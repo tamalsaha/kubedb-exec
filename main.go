@@ -36,9 +36,6 @@ func main() {
 		exec.Container("elasticsearch"),
 		// exec.Command("bash", "-c", `curl -k https://localhost:9200`),
 		exec.Command("bash", "-c", `curl -XGET -k -u "$ELASTIC_USER:$ELASTIC_PASSWORD" "https://localhost:9200/_cluster/health?pretty"`),
-
-		// exec.Command("curl -k https://localhost:9200"),
-		// exec.Command(`/bin/bash -c 'curl -XGET -k -u "$ELASTIC_USER:$ELASTIC_PASSWORD" "https://localhost:9200/_cluster/health?pretty"'`),
 	)
 	if err != nil {
 		panic(err)
