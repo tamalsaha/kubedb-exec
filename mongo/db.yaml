@@ -17,3 +17,5 @@ spec:
       requests:
         storage: 1Gi
   terminationPolicy: Delete
+
+# k exec -it svc/mgo-quickstart -c mongodb -- bash -c 'mongo admin -u $MONGO_INITDB_ROOT_USERNAME -p "$MONGO_INITDB_ROOT_PASSWORD"'
